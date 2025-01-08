@@ -1,0 +1,16 @@
+{
+  "name": "mern-example-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-packages": "npm install --prefix client && npm install --prefix server",
+    "client-build": "npm run build --prefix client",
+    "server-build": "npm run build --prefix server",
+    "build" : "npm run client-build && npm run server-build",
+    "start-prod": "npm run start --prefix server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
