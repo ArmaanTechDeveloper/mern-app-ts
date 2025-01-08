@@ -1,15 +1,26 @@
 import express from "express"
 import path from "path"
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const app = express();
 
 const PORT = process.env.PORT || 3000;
+
+console.log('node env ---------->' , process.env.NODE_ENV)
 
 app.use(express.json());
 
 app.get('/hello' , (req , res) => {
     return res.send({
         message: 'hello world'
+    })
+})
+
+app.get('/getenv' , (req , res) => {
+    return res.send({
+        message: `${process.env.NODE_ENV} set correctly`
     })
 })
 
